@@ -29,6 +29,9 @@ jobs:
       NEED_DEPLOY: ${{ (github.event_name == 'push') || (github.event_name == 'workflow_dispatch') }}
 
     steps:
+      - name: Start build phase log
+         run: echo ***START OF BUILD PHASE***
+
       - name: Checkout
         uses: actions/checkout@v2
 
