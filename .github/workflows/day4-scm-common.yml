@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Start build phase log
-         run: echo ***START OF BUILD PHASE***
+        run: echo ***START OF BUILD PHASE***
 
       - name: Checkout
         uses: actions/checkout@v2
