@@ -144,7 +144,7 @@ jobs:
 
       - name: List directory
         run: |
-          cd ./scmfe
+          cd ./scmfe/settings
           ls .
 
       - name: Patch SCM Frontend settings
