@@ -5,7 +5,7 @@ var uisettings = {
     "reportsEndpoint": "",
     "enableStats": false,
     "aiKey": "",
-    "clientId": "",
     "tenantId": "",
-    "audience": ""
+    "audience": "",
+    "clientId": ""
 }

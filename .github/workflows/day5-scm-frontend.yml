@@ -142,11 +142,6 @@ jobs:
           --index-document index.html 
           --404-document index.html
 
-      - name: List directory
-        run: |
-          cd ./scmfe/settings
-          ls .
-
       - name: Patch SCM Frontend settings
         run: >
           echo "var uisettings = 
