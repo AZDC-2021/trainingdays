@@ -153,9 +153,10 @@ jobs:
             \"enableStats\": true,
             \"aiKey\": \"${{ steps.infrastructure.outputs.applicationInsightsKey }}\",
             \"tenantId\":\"${{ secrets.AAD_TENANT_ID }}\",
+            \"audience\":\"${{ secrets.AAD_API_CLIENT_ID_URI }}\",
             \"clientId\":\"${{ secrets.AAD_FE_CLIENT_ID }}\"
           };" 
-          > ./scmfe/settings/settings.js
+          > scmfe/settings/settings.js
 
       - name: Deploy SCM Frontend
         run: >
