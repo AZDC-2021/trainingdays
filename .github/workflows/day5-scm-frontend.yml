@@ -144,6 +144,7 @@ jobs:
 
       - name: Patch SCM Frontend settings
         run: >
+          find ./scmfe/settings -name "*.js"
           echo "var uisettings = 
           { 
             \"endpoint\": \"${{ steps.infrastructure.outputs.contactsApiEndpoint }}\", 
@@ -155,7 +156,8 @@ jobs:
             \"tenantId\":\"${{ secrets.AAD_TENANT_ID }}\",
             \"audience\":\"${{ secrets.AAD_API_CLIENT_ID_URI }}\",
             \"clientId\":\"${{ secrets.AAD_FE_CLIENT_ID }}\"
-          };" | sudo tee ./scmfe/settings/settings.js
+          };" 
+          > ./scmfe/settings/settings.js
 
       - name: Deploy SCM Frontend
         run: >
